@@ -66,3 +66,25 @@ def split(line: Row):
 wordcount.py  
 
 提交一个远程job参考： https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/deployment/cli/#submitting-pyflink-jobs
+
+## 要设置空闲状态保持时间
+
+随着聚合查询key的增多，需要计算的状态会无限制增长，要设置空闲状态保持时间  
+https://nightlies.apache.org/flink/flink-docs-release-1.15/docs/dev/table/concepts/overview/#idle-state-retention-time
+
+## 语法
+
+left.minus(right)  返回左表的数据，这些数据右边不存在  
+
+in语法：  
+result = left.select(col('a'), col('b'), col('c')).where(col('a').in_(right))  
+
+result = tab.order_by(col('a').asc)  
+
+result3 = table.order_by(col('a').asc).offset(10).fetch(5)  
+
+.window(Tumble.over(lit(10).minutes).on(col('rowtime')).alias("w"))  
+
+.window(Slide.over(row_interval(10)).every(row_interval(5)).on(col('proctime')).alias("w"))  
+
+.window(Session.with_gap(lit(10).minutes).on(col('proctime')).alias("w"))  
