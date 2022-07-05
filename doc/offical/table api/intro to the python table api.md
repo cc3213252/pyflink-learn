@@ -1,3 +1,5 @@
+所有示例都在intro_table_api目录
+
 ## create TableEnvironment
 
 from pyflink.table import EnvironmentSettings, TableEnvironment
@@ -51,3 +53,9 @@ flink sql基于apache calcite
 较好的测试随机数： datagen  
 Datagen源表是系统内置的Connector，可以周期性地生成Datagen源表对应类型的随机数据  
 例子： sql_egg_query.py  
++I 插入  -U retract record，消息应该被删除或撤销  +U 更新记录
+
+凡是table的打印都应该使用[Table.limit](https://nightlies.apache.org/flink/flink-docs-release-1.15/api/python//pyflink.table.html#pyflink.table.Table.limit)
+
+connector为blackhole的结果表，用来调试，如果您在注册其他类型的Connector结果表时报错，但您不确定是系统问题还是结果表WITH参数错误，
+您可以将WITH参数修改为'connector' = 'blackhole'后，单击运行。如果不再报错，则证明系统没有问题，您需要确认修改WITH参数
