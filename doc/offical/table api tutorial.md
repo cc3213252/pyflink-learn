@@ -87,4 +87,5 @@ result3 = table.order_by(col('a').asc).offset(10).fetch(5)
 
 .window(Slide.over(row_interval(10)).every(row_interval(5)).on(col('proctime')).alias("w"))  
 
+session用于一段时间没有数据就关闭会话  
 .window(Session.with_gap(lit(10).minutes).on(col('proctime')).alias("w"))  
