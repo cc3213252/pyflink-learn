@@ -14,6 +14,9 @@ udf general_udf.py
     udf_agg.py  
     udf_agg_listview.py  
     udf_table_agg_listview.py  
+    vector_udf.py  
+    vector_udf_agg.py  
+    vector_agg_twoinput.py  
 
 ## 理解程序
 
@@ -23,4 +26,5 @@ row-based simple_agg.py
 
 ## 待学习
 
-pandas
+pandas  
+numpy  
