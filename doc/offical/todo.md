@@ -17,12 +17,16 @@ udf general_udf.py
     vector_udf.py  
     vector_udf_agg.py  
     vector_agg_twoinput.py  
+table_to_datastream:  
+    table_statementset.py  
 
 ## 理解程序
 
 row-based simple_agg.py  
           simple_pandas.py  
           flat_agg.py  
+table_to_datastream:  
+          exp_tochangelogstream.py  
 
 ## 待学习
 
