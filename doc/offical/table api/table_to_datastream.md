@@ -54,3 +54,5 @@ toChangelogStream(Table, Schema, ChangelogMode)
 
 exp_fromchangelogstream.py展示了如何通过使用upsert模式将更新消息的数量减少50%来限制传入更改的种类，从而提高效率。
 通过为toChangelogStream定义一个主键和upsert变更日志管理模式，可以减少结果消息的数量
+
+implicit conversions in scala开始到最后水过  
