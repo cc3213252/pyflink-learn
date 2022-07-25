@@ -20,6 +20,8 @@ udf general_udf.py
 table_to_datastream:  
     table_statementset.py  
 所有catalog程序  
+datastream_api:  
+    add_by_state.py  
 
 ## 理解程序
 
